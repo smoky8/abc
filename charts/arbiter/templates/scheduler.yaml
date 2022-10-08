@@ -1,0 +1,7 @@
+apiVersion: arbiter.k8s.com.cn/v1alpha1
+kind: Scheduler
+metadata:
+  name: {{ .Values.scheduler.nameOverride }}
+  namespace: {{ .Values.scheduler.namespace }}
+spec:
+  score: {{ .Values.scheduler.nameOverride }}

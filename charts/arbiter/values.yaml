@@ -1,0 +1,47 @@
+observer:
+  namespace: "kube-system"
+  resources:
+    limits:
+      cpu: 500m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 64Mi
+  serviceAccountName: "observability"
+  metricServer:
+    image:
+      observerImage: "arbiter/observer:v0.1"
+      serverImage: "arbiter/arbiter-metric-server:v0.1"
+      pullPolicy: IfNotPresent
+    nameOverride: "observer-metric-server"
+  prometheusServer:
+    image:
+      observerImage: "arbiter/observer:v0.1"
+      serverImage: "arbiter/arbiter-prometheus-server:v0.1"
+      pullPolicy: IfNotPresent
+    nameOverride: "observer-prometheus-server"
+    address: "http://prometheus-server.kube-system.svc.cluster.local"
+
+executor:
+  namespace: "kube-system"
+  nameOverride: "executor"
+  resources:
+    limits:
+      cpu: 500m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 64Mi
+  env: []
+  image:
+    resourceTaggerPluginImage: "arbiter/resource-tagger-plugin:v0.1"
+    pullPolicy: IfNotPresent
+    executorImage: "arbiter/executor:v0.1"
+scheduler:
+  nameOverride: "arbiter-scheduler"
+  namespace: "kube-system"
+  image: "arbirer/scheduler:latest"
+  pullPolicy: IfNotPresent
+  resources:
+    requests:
+      cpu: 100m
