@@ -3,6 +3,30 @@ entries:
   arbiter:
   - apiVersion: v2
     appVersion: v0.1
+    created: "2022-10-09T06:56:59.008649225Z"
+    description: Arbiter is an observing and managing tool for Kubernetes
+    digest: 25a221ffebed9ed6134ca063275b27e9e33575b5cbba07be92839c0672311721
+    home: https://arbiter.k8s.com.cn
+    icon: xxxxx
+    keywords:
+    - observing
+    - arbiter
+    maintainers:
+    - name: nkwangleiGIT
+      url: https://github.com/nkwangleiGIT
+    - name: Abirdcfly
+      url: https://github.com/Abirdcfly
+    - name: 0xff-dev
+      url: https://github.com/0xff-dev
+    name: arbiter
+    sources:
+    - https://github.com/arbiter/arbiter
+    type: application
+    urls:
+    - https://github.com/smoky8/abc/releases/download/arbiter-v0.2/arbiter-v0.2.tgz
+    version: v0.2
+  - apiVersion: v2
+    appVersion: v0.1
     created: "2022-10-08T07:17:45.042800733Z"
     description: Arbiter is an observing and managing tool for Kubernetes
     digest: c15f0ade88d0e2ae4451cfd8b4e0c1b5d8d6e498933d6e3935a05143665269a1
@@ -25,4 +49,4 @@ entries:
     urls:
     - https://github.com/smoky8/abc/releases/download/arbiter-v0.1/arbiter-v0.1.tgz
     version: v0.1
-generated: "2022-10-08T07:17:45.042807533Z"
+generated: "2022-10-09T06:56:59.008664526Z"
